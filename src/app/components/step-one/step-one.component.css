@@ -1,0 +1,59 @@
+.step-one-container {
+    /* border: 1px solid violet; */
+}
+
+.step-one-container .title {
+    margin-bottom: 40px;
+}
+
+.step-one-container .title h2 {
+    font-size: 2em;
+    color: var(--marine-blue);
+    margin-bottom: 10px;
+}
+
+.step-one-container .title span {
+    font-weight: 400;
+    color: var(--cool-gray);
+}
+
+.step-one-container .inputs {
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.step-one-container .inputs .row-form div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.step-one-container .inputs label {
+    color: var(--marine-blue);
+    font-size: .9em;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.step-one-container .inputs span {
+    color: var(--strawberry-red);
+    font-size: .9em;
+    font-weight: 600;
+}
+
+.step-one-container .inputs .row-form input {
+    all: inherit;
+    flex-grow: 1;
+    width: 100%;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    color: var(--marine-blue);
+    font-size: .9em;
+    font-weight: 600;
+    padding: 16px;
+}
+
+.step-one-container .inputs .row-form input:focus {
+    border-color: var(--marine-blue);
+}

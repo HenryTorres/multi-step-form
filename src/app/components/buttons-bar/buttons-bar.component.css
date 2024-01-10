@@ -1,0 +1,21 @@
+.buttons-bar {
+    border: 1px solid magenta;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons-bar :last-child {
+    all: unset;
+    padding: 1rem 2rem;
+    color: var(--white);
+    background-color: var(--marine-blue);
+    border-radius: 5px;
+}
+
+.buttons-bar :last-child:hover {
+    cursor: pointer;
+}
+
+/* .buttons-bar :last-child.disabled {
+    cursor: not-allowed;
+} */

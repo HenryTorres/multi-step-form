@@ -1,0 +1,40 @@
+<form class="step-one-container" [formGroup]="stepForm">
+    <div class="title">
+        <h2>Personal info</h2>
+        <span>Please provide your name, email, address and phone number</span>
+    </div>
+
+    <div class="inputs">
+        <div class="row-form">
+            <div>
+                <label for="name">Name</label>
+                @if(stepForm.controls['name'].getError('required') && stepForm.controls['name'].touched){
+                <span>This field is required</span>
+                }
+            </div>
+            <input formControlName="name" type="text" placeholder="e.g. Stephen King" (blur)="onBlurName()">
+        </div>
+
+        <div class="row-form">
+            <div>
+                <label for="email">Email address</label>
+                @if(stepForm.controls['email'].getError('pattern') && stepForm.controls['email'].touched){
+                <span>Email address is not formatted correctly</span>
+                }
+            </div>
+            <input #inputEmail formControlName="email" type="text" placeholder="e.g. henry@gmail.com"
+                (blur)="onBlurEmail()">
+        </div>
+
+        <div class="row-form">
+            <div>
+                <label for="phone">Phone number</label>
+                @if(stepForm.controls['phone'].getError('pattern') && stepForm.controls['phone'].touched){
+                <span>Phone number is not formatted correctly</span>
+                }
+            </div>
+            <input #inputPhone formControlName="phone" type="text" placeholder="e.g. +51 954 659 659"
+                (blur)="onBlurPhone()">
+        </div>
+    </div>
+</form>

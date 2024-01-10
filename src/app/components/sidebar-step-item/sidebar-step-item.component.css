@@ -1,0 +1,41 @@
+.step {
+    display: flex;
+    gap: 15px;
+}
+
+.step .circle {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    background-color: transparent;
+    color: var(--white);
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step .circle.selected {
+    background-color: var(--light-blue);
+    color: var(--marine-blue);
+}
+
+.step .info {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.step .info :first-child {
+    color: hsl(238, 100%, 88%);
+    font-size: .8em;
+}
+
+.step .info :last-child {
+    color: var(--white);
+    font-size: .9em;
+    font-weight: 700;
+    text-transform: uppercase;
+}

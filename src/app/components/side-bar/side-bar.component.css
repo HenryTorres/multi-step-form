@@ -1,0 +1,13 @@
+.sidebar-container {
+    width: 255px;
+    height: 567px;
+    padding: 2rem;
+    border-radius: 10px;
+    background-image: url('../../../assets/images/bg-sidebar-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
