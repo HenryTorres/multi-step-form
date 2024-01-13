@@ -12,3 +12,18 @@
     font-weight: 400;
     color: var(--cool-gray);
 }
+
+@media screen and (max-width: 930px) {
+    .header-title {
+        margin-bottom: 20px;
+    }
+
+    .header-title h2 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
+
+    .header-title span {
+        font-size: .9em;
+    }
+}

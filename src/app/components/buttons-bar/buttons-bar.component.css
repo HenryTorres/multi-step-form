@@ -10,7 +10,7 @@
     color: var(--white);
     background-color: var(--marine-blue);
     border-radius: 5px;
-    width: 121px;
+    /* flex-basis: 121px; */
     text-align: center;
 }
 
@@ -29,10 +29,20 @@
     background-color: transparent;
     border-radius: 5px;
     font-weight: 500;
-    width: 121px;
+    /* flex-basis: 121px; */
 }
 
 .buttons-bar :first-child:hover {
     cursor: pointer;
     color: var(--marine-blue);
+}
+
+@media screen and (max-width: 930px) {
+    .buttons-bar :last-child {
+        padding: .5rem 1rem;
+    }
+
+    .buttons-bar :first-child {
+        padding: .5rem 1rem;
+    }
 }

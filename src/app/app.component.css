@@ -1,5 +1,5 @@
 .container {
-    /* border: 1px solid red; */
+    /* outline: 1px solid green; */
     border-radius: 10px;
     height: 600px;
     width: 940px;
@@ -8,12 +8,12 @@
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
 .multi-step-form {
-    /* border: 1px solid green; */
-    height: 100%;
+    /* border: 1px solid fuchsia; */
+    /* height: 550px; */
     padding: 2.5rem 0;
     margin-left: 100px;
     margin-right: 84px;
@@ -21,6 +21,7 @@
 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 step-one,
@@ -29,4 +30,53 @@ step-three,
 step-four,
 thanks {
     flex-grow: 1;
+}
+
+@media screen and (max-width: 930px) {
+    .container {
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .multi-step-form {
+        padding: 25px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .container {
+        background-color: var(--magnolia);
+        /* flex-grow: 1; */
+        position: relative;
+    }
+
+    .multi-step-form {
+        position: relative;
+        top: 90px;
+        background-color: var(--white);
+        border-radius: 10px;
+        padding: 25px;
+        z-index: 2;
+    }
+
+    side-bar {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+
+        z-index: 1;
+    }
+
+    /* step-one,
+    step-two,
+    step-three,
+    step-four,
+    thanks {
+        flex-grow: 0;
+    } */
+
+
 }
