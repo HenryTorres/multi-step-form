@@ -1,0 +1,14 @@
+.header-title {
+    margin-bottom: 40px;
+}
+
+.header-title h2 {
+    font-size: 2em;
+    color: var(--marine-blue);
+    margin-bottom: 10px;
+}
+
+.header-title span {
+    font-weight: 400;
+    color: var(--cool-gray);
+}

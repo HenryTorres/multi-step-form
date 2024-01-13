@@ -2,7 +2,7 @@
   <side-bar [currentStep]="currentStep" />
   <div class="multi-step-form">
     @if (currentStep == 1) {
-    <step-one (onValidation)="validationStepOne($event)" />
+    <step-one />
     }
 
     @if (currentStep == 2) {
@@ -14,9 +14,15 @@
     }
 
     @if (currentStep == 4) {
-    <step-four />
+    <step-four (onBackStepTwo)="backStepTwo()" />
     }
 
-    <buttons-bar (onNextStep)="nextStep()" (onPreviousStep)="previousStep()" [stepOneValid]="stepOneValid" />
+    @if (currentStep == 5) {
+    <thanks />
+    }
+
+    @if (currentStep
+    <= 4) { <buttons-bar (onNextStep)="nextStep()" (onPreviousStep)="previousStep()" [textButton]="textButton" />
+    }
   </div>
 </div>

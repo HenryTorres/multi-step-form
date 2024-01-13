@@ -1,24 +1,4 @@
-.step-one-container {
-    /* border: 1px solid violet; */
-}
-
-.step-one-container .title {
-    margin-bottom: 40px;
-}
-
-.step-one-container .title h2 {
-    font-size: 2em;
-    color: var(--marine-blue);
-    margin-bottom: 10px;
-}
-
-.step-one-container .title span {
-    font-weight: 400;
-    color: var(--cool-gray);
-}
-
 .step-one-container .inputs {
-    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -56,4 +36,8 @@
 
 .step-one-container .inputs .row-form input:focus {
     border-color: var(--marine-blue);
+}
+
+.step-one-container .inputs .row-form input.error {
+    border-color: var(--strawberry-red);
 }

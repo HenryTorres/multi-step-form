@@ -1,3 +1,46 @@
 <div class="step-two-container">
-    <span>Paso 2</span>
+    <header-step [title]="'Select your plan'" [description]="'You have the option of monthly or yearly billing.'" />
+
+    <div class="plans">
+        <div class="plan {{ plan.arcade }}" [class.grow]="plan.yearly" (click)="selArcade()">
+            <div>
+                <img src="/assets/images/icon-arcade.svg" alt="">
+            </div>
+            <span class="category">Arcade</span>
+
+            <span class="price">{{ !plan.yearly ? '$9/mo' : '$90/yr' }}</span>
+            @if (plan.yearly) {
+            <span class="free">2 months free</span>
+            }
+        </div>
+        <div class="plan {{ plan.advance }}" [class.grow]="plan.yearly" (click)="selAdvance()">
+            <div>
+                <img src="/assets/images/icon-advanced.svg" alt="">
+            </div>
+            <span class="category">Advance</span>
+            <span class="price">{{ !plan.yearly ? '$12/mo' : '$120/yr' }}</span>
+            @if (plan.yearly) {
+            <span class="free">2 months free</span>
+            }
+        </div>
+        <div class="plan {{ plan.pro }}" [class.grow]="plan.yearly" (click)="selPro()">
+            <div>
+                <img src="/assets/images/icon-pro.svg" alt="">
+            </div>
+            <span class="category">Pro</span>
+            <span class="price">{{ !plan.yearly ? '$15/mo' : '$150/yr' }}</span>
+            @if (plan.yearly) {
+            <span class="free">2 months free</span>
+            }
+        </div>
+    </div>
+
+    <div class="period">
+        <span [class.selected]="!plan.yearly">Monthly</span>
+        <label class="switch">
+            <input #chkYearly type="checkbox" (click)="changePlan()" [checked]="plan.yearly">
+            <span class="slider"></span>
+        </label>
+        <span [class.selected]="plan.yearly">Yearly</span>
+    </div>
 </div>

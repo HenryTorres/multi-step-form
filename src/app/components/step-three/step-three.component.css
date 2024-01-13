@@ -1,0 +1,67 @@
+.step-three-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.step-three-container .form .add-on {
+    border: 1px solid var(--cool-gray);
+    border-radius: 10px;
+    padding: 22px;
+    flex-basis: 79px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.step-three-container .form .add-on.selected {
+    border-color: var(--marine-blue);
+    background-color: var(--light-blue);
+}
+
+.step-three-container .add-on .check {
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--cool-gray);
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.step-three-container .add-on .check.selected {
+    background-color: blueviolet !important;
+}
+
+.step-three-container .add-on .check.selected img {
+    content: url('/assets/images/icon-checkmark.svg');
+}
+
+.step-three-container .form .add-on .description {
+    margin: 0 22px;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.step-three-container .form .add-on .description :first-child {
+    color: var(--marine-blue);
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.step-three-container .form .add-on .description :last-child {
+    color: var(--cool-gray);
+    font-size: .95em;
+    font-weight: 5600;
+}
+
+.step-three-container .form .add-on .price span {
+    font-size: .9em;
+    color: var(--purplish-blue);
+}

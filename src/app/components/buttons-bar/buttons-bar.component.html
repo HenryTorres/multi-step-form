@@ -1,5 +1,4 @@
 <div class="buttons-bar">
     <button (click)="previousStep($event)">Go Back</button>
-    <button (click)="nextStep($event)">Next
-        Step</button>
+    <button (click)="nextStep($event)" [class.confirm]="textButton=='Confirm'">{{ textButton }}</button>
 </div>

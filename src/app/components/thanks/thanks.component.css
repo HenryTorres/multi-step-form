@@ -1,0 +1,26 @@
+.thanks-container {
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.thanks-container img {
+    margin-bottom: 15px;
+}
+
+.thanks-container h2 {
+    color: var(--marine-blue);
+    font-size: 2em;
+}
+
+.thanks-container p {
+    text-align: center;
+    color: var(--cool-gray);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+}

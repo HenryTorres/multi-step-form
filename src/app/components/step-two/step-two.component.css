@@ -1,0 +1,116 @@
+.step-two-container .plans {
+    display: flex;
+    justify-content: space-between;
+}
+
+.step-two-container .plans .plan {
+    border: 1px solid var(--cool-gray);
+    width: 136px;
+    height: 158px;
+    padding: 1.3rem;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.step-two-container .plans .plan:hover {
+    border-color: var(--marine-blue);
+}
+
+.step-two-container .plans .plan.grow {
+    height: 181px;
+}
+
+.step-two-container .plans .plan div {
+    flex-grow: 1;
+}
+
+.step-two-container .plans .plan .category {
+    color: var(--marine-blue);
+    font-size: 1.15em;
+    font-weight: 500;
+}
+
+.step-two-container .plans .plan .price {
+    color: var(--cool-gray);
+    font-size: .9em;
+    font-weight: 500;
+}
+
+.step-two-container .plans .plan .free {
+    color: var(--marine-blue);
+    font-size: .8em;
+}
+
+.step-two-container .period {
+    margin-top: 30px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: hsl(230, 75%, 98%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.step-two-container .period span {
+    color: var(--cool-gray);
+}
+
+.step-two-container .period .switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 22px;
+}
+
+.step-two-container .period .switch input {
+    display: none;
+}
+
+.step-two-container .period .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: var(--marine-blue);
+    transition: .3s;
+    border-radius: 34px;
+}
+
+.step-two-container .period .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 5px;
+
+    background-color: white;
+    transition: .2s;
+    border-radius: 50%;
+}
+
+.step-two-container .period input:checked+.slider {
+    background-color: var(--marine-blue);
+}
+
+.step-two-container .period input:checked+.slider:before {
+    transform: translateX(22px);
+}
+
+.period .selected {
+    color: var(--marine-blue) !important;
+    font-weight: 600;
+}
+
+.step-two-container .plans .plan.active {
+    border-color: var(--marine-blue);
+    background-color: var(--light-blue);
+}

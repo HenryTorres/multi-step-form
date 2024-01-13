@@ -1,5 +1,5 @@
 .buttons-bar {
-    border: 1px solid magenta;
+    /* border: 1px solid magenta; */
     display: flex;
     justify-content: space-between;
 }
@@ -10,12 +10,29 @@
     color: var(--white);
     background-color: var(--marine-blue);
     border-radius: 5px;
+    width: 121px;
+    text-align: center;
 }
 
 .buttons-bar :last-child:hover {
     cursor: pointer;
 }
 
-/* .buttons-bar :last-child.disabled {
-    cursor: not-allowed;
-} */
+.buttons-bar :last-child.confirm {
+    background-color: var(--purplish-blue);
+}
+
+.buttons-bar :first-child {
+    all: unset;
+    padding: 1rem 2rem;
+    color: var(--cool-gray);
+    background-color: transparent;
+    border-radius: 5px;
+    font-weight: 500;
+    width: 121px;
+}
+
+.buttons-bar :first-child:hover {
+    cursor: pointer;
+    color: var(--marine-blue);
+}

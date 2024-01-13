@@ -1,0 +1,96 @@
+.step-four-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.step-four-container .form .summary {
+    background-color: var(--magnolia);
+    border-radius: 5px;
+    padding: 23px;
+}
+
+.step-four-container .form .summary .plan {
+    border-bottom: 1px solid var(--cool-gray);
+    display: flex;
+    justify-content: space-between;
+}
+
+.step-four-container .form .summary .plan div:first-child {
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.step-four-container .form .summary .plan div:first-child span {
+    color: var(--marine-blue);
+    font-weight: 500;
+}
+
+.step-four-container .form .summary .plan div:first-child button {
+    all: unset;
+    text-decoration: underline;
+    color: var(--cool-gray);
+    font-size: .9em;
+    font-weight: 600;
+}
+
+.step-four-container .form .summary .plan div:first-child button:hover {
+    cursor: pointer;
+}
+
+.step-four-container .form .summary .plan div:last-child {
+    margin-bottom: 20px;
+    color: var(--marine-blue);
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-four-container .form .summary .add-on {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 25px;
+}
+
+.step-four-container .form .summary .add-on .item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.step-four-container .form .summary .add-on .item :first-child {
+    color: var(--cool-gray);
+    font-size: .9em;
+    font-weight: 500;
+}
+
+.step-four-container .form .summary .add-on .item :last-child {
+    color: var(--marine-blue);
+    font-size: .9em;
+    font-weight: 500;
+}
+
+.step-four-container .form .total {
+    display: flex;
+    justify-content: space-between;
+    padding: 23px;
+}
+
+.step-four-container .form .total :first-child {
+    color: var(--cool-gray);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.step-four-container .form .total :last-child {
+    color: var(--purplish-blue);
+    font-size: 1.2em;
+    font-weight: 600;
+}

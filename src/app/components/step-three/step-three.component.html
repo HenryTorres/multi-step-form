@@ -1,3 +1,42 @@
 <div class="step-three-container">
-    <span>Paso 3</span>
+    <header-step [title]="'Pick add-ons'" [description]="'Add-on help enhance your gaming experince.'" />
+
+    <div class="form">
+        <div class="add-on online" [class.selected]="addOn.onlineChecked">
+            <div class="check" [class.selected]="addOn.onlineChecked" (click)="onlineClick()">
+                <img src="" alt="">
+            </div>
+            <div class="description">
+                <span>Online service</span>
+                <span>Access to multiplayer games</span>
+            </div>
+            <div class="price">
+                <span>+${{ planType=='mo' ? '1': '10' }}/{{ planType }}</span>
+            </div>
+        </div>
+        <div class="add-on larger" [class.selected]="addOn.largerChecked">
+            <div class="check" [class.selected]="addOn.largerChecked" (click)="largerClick()">
+                <img src="" alt="">
+            </div>
+            <div class="description">
+                <span>Larger storage</span>
+                <span>Extra 1TB of cloud save</span>
+            </div>
+            <div class="price">
+                <span>+${{ planType=='mo' ? '2': '20' }}/{{ planType }}</span>
+            </div>
+        </div>
+        <div class="add-on customizable" [class.selected]="addOn.customizableChecked">
+            <div class="check" [class.selected]="addOn.customizableChecked" (click)="customizableClick()">
+                <img src="" alt="">
+            </div>
+            <div class="description">
+                <span>Customizable profile</span>
+                <span>Custom theme on your profile</span>
+            </div>
+            <div class="price">
+                <span>+${{ planType=='mo' ? '2': '20' }}/{{ planType }}</span>
+            </div>
+        </div>
+    </div>
 </div>

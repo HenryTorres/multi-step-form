@@ -1,39 +1,42 @@
 <form class="step-one-container" [formGroup]="stepForm">
-    <div class="title">
-        <h2>Personal info</h2>
-        <span>Please provide your name, email, address and phone number</span>
-    </div>
+    <header-step [title]="'Personal info'"
+        [description]="'Please provide your name, email, address and phone number.'" />
 
     <div class="inputs">
         <div class="row-form">
             <div>
                 <label for="name">Name</label>
-                @if(stepForm.controls['name'].getError('required') && stepForm.controls['name'].touched){
+                @if(name?.invalid && (name?.dirty || name?.touched)){
                 <span>This field is required</span>
                 }
             </div>
-            <input formControlName="name" type="text" placeholder="e.g. Stephen King" (blur)="onBlurName()">
+            <input formControlName="name" type="text" class="{{ (name?.invalid) && (name?.touched) ? 'error' : '' }}"
+                placeholder="e.g. Stephen King" (blur)="onBlurName()">
         </div>
 
         <div class="row-form">
             <div>
                 <label for="email">Email address</label>
-                @if(stepForm.controls['email'].getError('pattern') && stepForm.controls['email'].touched){
-                <span>Email address is not formatted correctly</span>
+                @if (email?.invalid && (email?.dirty || email?.touched)){
+                @if (email?.getError('required')) { <span>This field is required</span> }
+                @if (email?.getError('pattern')) { <span>Email address is not formatted correctly</span> }
                 }
             </div>
-            <input #inputEmail formControlName="email" type="text" placeholder="e.g. henry@gmail.com"
+            <input #inputEmail formControlName="email" type="text"
+                class="{{ (email?.invalid) && (email?.touched) ? 'error' : '' }}" placeholder="e.g. henry@gmail.com"
                 (blur)="onBlurEmail()">
         </div>
 
         <div class="row-form">
             <div>
                 <label for="phone">Phone number</label>
-                @if(stepForm.controls['phone'].getError('pattern') && stepForm.controls['phone'].touched){
-                <span>Phone number is not formatted correctly</span>
+                @if (phone?.invalid && (phone?.dirty || phone?.touched)) {
+                @if (phone?.getError('required')){ <span>This field is required</span> }
+                @if (phone?.getError('pattern')){ <span>Phone number is not formatted correctly</span> }
                 }
             </div>
-            <input #inputPhone formControlName="phone" type="text" placeholder="e.g. +51 954 659 659"
+            <input #inputPhone formControlName="phone" type="text"
+                class="{{ (phone?.invalid) && (phone?.touched) ? 'error' : '' }}" placeholder="e.g. 954659659"
                 (blur)="onBlurPhone()">
         </div>
     </div>

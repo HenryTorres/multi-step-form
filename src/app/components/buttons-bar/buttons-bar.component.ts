@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './buttons-bar.component.css'
 })
 export class ButtonsBarComponent {
-  @Input() stepOneValid: boolean = false;
+  @Input() textButton: string = '';
 
   @Output() onNextStep = new EventEmitter<void>();
   @Output() onPreviousStep = new EventEmitter<void>();

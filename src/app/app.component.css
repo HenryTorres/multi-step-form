@@ -1,4 +1,5 @@
 .container {
+    /* border: 1px solid red; */
     border-radius: 10px;
     height: 600px;
     width: 940px;
@@ -11,10 +12,11 @@
 }
 
 .multi-step-form {
-    /* border: 1px solid red; */
+    /* border: 1px solid green; */
     height: 100%;
-    margin: 0 3rem;
-    padding: 1rem 0;
+    padding: 2.5rem 0;
+    margin-left: 100px;
+    margin-right: 84px;
     flex-grow: 1;
 
     display: flex;
@@ -24,6 +26,7 @@
 step-one,
 step-two,
 step-three,
-step-four {
+step-four,
+thanks {
     flex-grow: 1;
 }

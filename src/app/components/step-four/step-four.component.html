@@ -1,3 +1,43 @@
-<div class="four-container">
-    <span>Paso 4</span>
+<div class="step-four-container">
+    <header-step [title]="'Finishing up'" [description]="'Double-check everything looks OK before confirming.'" />
+
+    <div class="form">
+        <div class="summary">
+            <div class="plan">
+                <div>
+                    <span>{{ plan }} ({{ typePlan }})</span>
+                    <button (click)="backStepTwo()">Change</button>
+                </div>
+                <div>
+                    <span>${{ pricePlan }}/{{ timePlan }}</span>
+                </div>
+            </div>
+            <div class="add-on">
+                @if (addOn.onlineChecked) {
+                <div class="item online">
+                    <span>Online service</span>
+                    <span>+${{ addOn.priceOnline }}/{{ timePlan }}</span>
+                </div>
+                }
+
+                @if (addOn.largerChecked) {
+                <div class="item larger">
+                    <span>Larger storage</span>
+                    <span>+${{ addOn.priceLarger }}/{{ timePlan }}</span>
+                </div>
+                }
+
+                @if (addOn.customizableChecked) {
+                <div class="item customizable">
+                    <span>Customizable profile</span>
+                    <span>+${{ addOn.priceCustomizable }}/{{ timePlan }}</span>
+                </div>
+                }
+            </div>
+        </div>
+        <div class="total">
+            <span>Total (per {{ timePlan=='mo' ? 'month' : 'year' }})</span>
+            <span>${{ total }}/{{ timePlan }}</span>
+        </div>
+    </div>
 </div>
