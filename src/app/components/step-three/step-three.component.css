@@ -58,10 +58,40 @@
 .step-three-container .form .add-on .description :last-child {
     color: var(--cool-gray);
     font-size: .95em;
-    font-weight: 5600;
+    font-weight: 5100;
 }
 
 .step-three-container .form .add-on .price span {
     font-size: .9em;
     color: var(--purplish-blue);
+}
+
+@media screen and (max-width: 930px) {
+    .step-three-container .form {
+        gap: 8px;
+    }
+
+    .step-three-container .form .add-on {
+        padding: 10px;
+        flex-basis: 79px;
+    }
+
+    .step-three-container .add-on .check {
+        width: 18px;
+        height: 18px;
+    }
+
+    .step-three-container .form .add-on .description {
+        margin: 0 10px;
+    }
+
+    .step-three-container .form .add-on .description :first-child {
+        font-size: .9em;
+        font-weight: 500;
+    }
+
+    .step-three-container .form .add-on .description :last-child {
+        font-size: .8em;
+        font-weight: 500;
+    }
 }

@@ -40,7 +40,12 @@
     text-transform: uppercase;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 710px) {
+    .step {
+        justify-content: center;
+        gap: .1rem;
+    }
+
     .step .info .hide-text {
         display: none;
     }

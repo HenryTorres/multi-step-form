@@ -1,5 +1,6 @@
 .step-two-container .plans {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-between;
 }
 
@@ -25,6 +26,12 @@
 
 .step-two-container .plans .plan div {
     flex-grow: 1;
+}
+
+.step-two-container .plans .plan .group {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
 .step-two-container .plans .plan .category {
@@ -113,4 +120,41 @@
 .step-two-container .plans .plan.active {
     border-color: var(--marine-blue);
     background-color: var(--light-blue);
+}
+
+@media screen and (max-width: 930px) {
+    .step-two-container .plans {
+        flex-direction: column;
+        gap: 11px;
+    }
+
+    .step-two-container .plans .plan {
+        width: 100%;
+        height: 100%;
+        padding: .8rem;
+        border-radius: 5px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .step-two-container .plans .plan div {
+        flex-grow: 0;
+    }
+
+    .step-two-container .plans .plan .group {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .step-two-container .plans .plan.grow {
+        height: 100%;
+    }
+
+    .step-two-container .period {
+        margin-top: 15px;
+    }
 }

@@ -1,4 +1,7 @@
 <div class="buttons-bar">
-    <button (click)="previousStep($event)">Go Back</button>
-    <button (click)="nextStep($event)" [class.confirm]="textButton=='Confirm'">{{ textButton }}</button>
+    @if (currentStep > 1) {
+    <button #backButton class="backButton" (click)="previousStep($event)">Go Back</button>
+    }
+    <button #nextButton class="nextButton" (click)="nextStep($event)" [class.confirm]="currentStep==4">{{
+        textButton }}</button>
 </div>

@@ -30,6 +30,7 @@ export class AppComponent {
       if (this.formService.stepOneValid) {
         this.currentStep = 2;
         this.textButton = "Next Step";
+        this.formService.currentStep = this.currentStep;
         return;
       }
     }
@@ -38,6 +39,7 @@ export class AppComponent {
       if (this.formService.stepTwoValid) {
         this.currentStep = 3;
         this.textButton = "Next Step";
+        this.formService.currentStep = this.currentStep;
         return;
       }
     }
@@ -46,12 +48,14 @@ export class AppComponent {
       if (this.formService.stepThreeValid) {
         this.currentStep = 4;
         this.textButton = "Confirm";
+        this.formService.currentStep = this.currentStep;
         return;
       }
     }
 
     if (this.currentStep == 4) {
       this.currentStep = 5;
+      this.formService.currentStep = this.currentStep;
       return;
     }
   }
@@ -59,6 +63,7 @@ export class AppComponent {
   previousStep() {
     if (this.currentStep == 1) { return; }
     this.currentStep--;
+    this.formService.currentStep = this.currentStep;
 
     if (this.currentStep == 1 || this.currentStep == 2 || this.currentStep == 3) {
       this.textButton = "Next Step";
@@ -67,5 +72,7 @@ export class AppComponent {
 
   backStepTwo() {
     this.currentStep = 2;
+    this.textButton = "Next Step";
+    this.formService.currentStep = this.currentStep;
   }
 }

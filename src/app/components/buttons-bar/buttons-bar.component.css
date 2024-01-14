@@ -1,48 +1,37 @@
 .buttons-bar {
     /* border: 1px solid magenta; */
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
-.buttons-bar :last-child {
+.buttons-bar .nextButton {
     all: unset;
     padding: 1rem 2rem;
     color: var(--white);
     background-color: var(--marine-blue);
     border-radius: 5px;
-    /* flex-basis: 121px; */
     text-align: center;
 }
 
-.buttons-bar :last-child:hover {
+.buttons-bar .nextButton:hover {
     cursor: pointer;
 }
 
-.buttons-bar :last-child.confirm {
+.buttons-bar .nextButton.confirm {
     background-color: var(--purplish-blue);
 }
 
-.buttons-bar :first-child {
+.buttons-bar .backButton {
     all: unset;
     padding: 1rem 2rem;
     color: var(--cool-gray);
     background-color: transparent;
     border-radius: 5px;
     font-weight: 500;
-    /* flex-basis: 121px; */
+    margin-right: auto;
 }
 
-.buttons-bar :first-child:hover {
+.buttons-bar .backButton:hover {
     cursor: pointer;
     color: var(--marine-blue);
-}
-
-@media screen and (max-width: 930px) {
-    .buttons-bar :last-child {
-        padding: .5rem 1rem;
-    }
-
-    .buttons-bar :first-child {
-        padding: .5rem 1rem;
-    }
 }

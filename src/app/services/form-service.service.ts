@@ -6,15 +6,17 @@ import { IAddOn, IPersonalInfo, IPlan } from '../interfaces/i-personal-info';
 })
 export class FormService {
 
+  currentStep: number = 1;
+
   stepOneValid: boolean = false;
   stepTwoValid: boolean = false;
   stepThreeValid: boolean = false;
   stepFourValid: boolean = false;
 
   personal: IPersonalInfo = {
-    name: 'Henry',
-    email: 'henry@gmail.com',
-    phone: '999999999'
+    name: '',
+    email: '',
+    phone: ''
   }
 
   plan: IPlan = {

@@ -46,6 +46,7 @@ export class StepFourComponent implements OnInit {
   }
 
   backStepTwo() {
+    this.formService.currentStep = 2;
     this.onBackStepTwo.emit();
   }
 

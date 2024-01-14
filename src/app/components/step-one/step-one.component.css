@@ -1,7 +1,3 @@
-.step-one-container {
-    /* border: 1px solid red; */
-}
-
 .step-one-container .inputs {
     display: flex;
     flex-direction: column;
